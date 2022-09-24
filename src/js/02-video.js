@@ -16,7 +16,7 @@ player.on('timeupdate', throttle(onTimeUpdate, 1000));
 
 player.setCurrentTime(
     localStorage.getItem('videoplayer-current-time'))
-    .then(function (seconds) { }
+    .then(function (seconds) { })
     .catch(function(error) {
         switch (error.name) {
             case 'RangeError':
@@ -24,4 +24,4 @@ player.setCurrentTime(
             default:
                 break;
         }
-    }));
+    });
