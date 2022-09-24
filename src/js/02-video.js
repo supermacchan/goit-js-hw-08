@@ -14,6 +14,4 @@ console.log(player);
     //     console.log('title:', title);
     // });
 
-    player.setCurrentTime(localStorage.getItem('videoplayer-current-time')).then(function(seconds) {
-    // seconds = the actual time that the player seeked to
-    });
+    player.setCurrentTime(localStorage.getItem('videoplayer-current-time')).then(function(currentTime) {});
