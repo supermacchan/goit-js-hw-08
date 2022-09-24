@@ -5,15 +5,9 @@ const player = new Player(iframe);
 
 console.log(player);
 
-    player.on('timeupdate', function() {
+    player.on('timeupdate', function(timeupdate) {
         console.log('time updated');
-        const currentTime = player.getCurrentTime().then(function(seconds) {});
-        console.log(currentTime);
-        localStorage.setItem('videoplayer-current-time', JSON.stringify(currentTime));
+        localStorage.setItem('videoplayer-current-time', JSON.stringify(timeupdate.seconds));
     });
-
-    // player.getVideoTitle().then(function(title) {
-    //     console.log('title:', title);
-    // });
 
     // player.setCurrentTime(localStorage.getItem('videoplayer-current-time')).then(function(currentTime) {});
