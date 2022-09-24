@@ -7,11 +7,12 @@ console.log(player);
 
     player.on('timeupdate', function() {
         console.log('time updated');
-        localStorage.setItem('videoplayer-current-time', currentTime);
+        const currentTime = (player.getCurrentTime());
+        localStorage.setItem('videoplayer-current-time', JSON.stringify(currentTime));
     });
 
     // player.getVideoTitle().then(function(title) {
     //     console.log('title:', title);
     // });
 
-    player.setCurrentTime(localStorage.getItem('videoplayer-current-time')).then(function(currentTime) {});
+    // player.setCurrentTime(localStorage.getItem('videoplayer-current-time')).then(function(currentTime) {});
