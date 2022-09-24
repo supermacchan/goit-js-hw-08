@@ -20,4 +20,14 @@ function onMessageInput(e) {
     localStorage.setItem('feedback-form-state', JSON.stringify(user));
 }
 
+const emailData = JSON.parse(localStorage.getItem('feedback-form-state')).email;
+const messageData = JSON.parse(localStorage.getItem('feedback-form-state')).message;
+
+if (emailData !== '') {
+    emailInput.value = emailData;
+};
+
+if (messageData !== '') {
+    messageInput.value = messageData;
+};
 
