@@ -14,11 +14,13 @@ form.addEventListener('submit', onFormSubmit);
 
 function onEmailInput(e) {
     user.email = e.target.value;
+    user.message = messageInput.value;
     localStorage.setItem('feedback-form-state', JSON.stringify(user));
 }
 
 function onMessageInput(e) {
     user.message = e.target.value;
+    user.email = emailInput.value;
     localStorage.setItem('feedback-form-state', JSON.stringify(user));
 }
 
